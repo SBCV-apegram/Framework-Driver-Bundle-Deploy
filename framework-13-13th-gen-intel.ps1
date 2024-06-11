@@ -12,7 +12,7 @@ Invoke-WebRequest https://www.7-zip.org/a/7zr.exe -OutFile $env:TEMP\7zr.exe
 Set-Location $env:TEMP
 New-Item -Path . -Name 'DriverBundle' -ItemType 'directory' -Force
 Remove-Item -Path ".\DriverBundle\*" -Recurse
-.\7zr.exe x .\frameworkinstall.7z -o".\DriverBundle" -y
+.\7zr.exe x .\frameworkinstall.exe -o".\DriverBundle" -y
 Set-Location .\DriverBundle
 
 # Call Framework's batch file in unattended mode
